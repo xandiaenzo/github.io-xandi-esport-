@@ -1,0 +1,167 @@
+body{
+margin:0;
+font-family:Arial;
+background:#05060a;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle at top,#1a0f3f,#05060a);
+z-index:-2;
+}
+
+.grid{
+position:fixed;
+width:200%;
+height:200%;
+background:
+linear-gradient(transparent 95%, #7a5cff22 100%),
+linear-gradient(90deg, transparent 95%, #4fd1ff22 100%);
+background-size:60px 60px;
+animation:move 12s linear infinite;
+z-index:-1;
+opacity:0.4;
+}
+
+@keyframes move{
+0%{transform:translate(0,0);}
+100%{transform:translate(-60px,-60px);}
+}
+
+/* PAGES */
+.page{
+padding:50px;
+}
+
+.hidden{display:none;}
+
+/* LOGO */
+.logo{
+font-size:70px;
+font-weight:900;
+letter-spacing:5px;
+background:linear-gradient(90deg,#7a5cff,#4fd1ff,#ff4f7b);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-top:80px;
+}
+
+.sousTitre{
+color:#aaa;
+margin-bottom:40px;
+}
+
+/* PANEL */
+.panel{
+background:rgba(20,20,40,0.55);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.08);
+padding:25px;
+border-radius:18px;
+display:inline-block;
+}
+
+/* INPUTS */
+input,select{
+width:300px;
+padding:14px;
+margin:10px;
+border:none;
+border-radius:12px;
+background:#141423;
+color:white;
+}
+
+/* BOUTONS */
+button{
+width:300px;
+padding:14px;
+margin:10px;
+border:none;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+background:linear-gradient(90deg,#7a5cff,#4fd1ff);
+transition:0.2s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.adminBtn{
+background:#1f1f33;
+}
+
+.retour{
+background:transparent;
+border:1px solid #444;
+}
+
+.danger{
+background:#ff4f7b;
+}
+
+/* PLANNING */
+#planning{
+display:grid;
+grid-template-columns:120px repeat(5,1fr);
+gap:10px;
+margin-top:30px;
+}
+
+.header{
+background:#15152a;
+padding:12px;
+border-radius:10px;
+font-weight:bold;
+}
+
+.hour{
+background:#101020;
+padding:18px;
+border-radius:10px;
+font-weight:bold;
+}
+
+/* SLOTS */
+.slot{
+min-height:90px;
+border-radius:10px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-size:12px;
+}
+
+.libre{
+background:#2ecc71;
+cursor:pointer;
+}
+
+.reserve{
+background:#ff4f7b;
+}
+
+.ferme{
+background:#444;
+}
+
+.titreGlow{
+text-shadow:0 0 20px #7a5cff;
+}
+
+.resCard{
+background:#141423;
+width:340px;
+margin:10px auto;
+padding:15px;
+border-radius:12px;
+}
